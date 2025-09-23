@@ -1,0 +1,26 @@
+#include <iostream>
+#include <cmath>
+
+
+int main()
+{
+    setlocale(LC_ALL, "RU"); // українського кодування на жаль не знайшов 
+
+    int Gp, kt1 ;
+    std::cout << "Введіть значення гіпотенузи:";
+    std::cin >> Gp;
+    std::cout << "Введіть значення першого катета:";
+    std::cin >> kt1;
+
+    if (kt1 >= Gp) {
+        std::cout << "З вашими даними визначити другий катет неможливо.";
+    }
+    else {
+        int kt2;
+
+        kt2 = sqrt(pow(Gp, 2) - pow(kt1, 2));
+
+        std::cout << "Ваш другий катет = " << kt2;
+    }
+
+}
