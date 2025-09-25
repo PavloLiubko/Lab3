@@ -1,0 +1,33 @@
+#include <iostream>
+#include <string>
+
+int main()
+{
+    setlocale(LC_ALL, "RU"); // українського кодування на жаль не знайшов 
+    
+    std::string n;
+    std::cout << "Введіть деяке чотирьохзначне число:";
+    std::cin >> n;
+    std::cout << "\n";
+
+    int num = std::stoi(n);
+    if (num <= 999) {
+        std::cout << "Ваше число не підходить, введіть інше.";
+    }
+    else if (num > 9999) {
+        std::cout << "Ваше число не підходить, введіть інше.";
+        }
+
+
+    int first, second, third, fourth;
+
+    first = std::stoi(std::string(1, n[0]));
+    second = std::stoi(std::string(1, n[1]));
+    third = std::stoi(std::string(1, n[2]));
+    fourth = std::stoi(std::string(1, n[3]));
+
+    std::cout << "Сума цифр вашого числа = " << first + second + third + fourth << "\n" << "Добуток цифр вашого числа = " << first * second * third * fourth << "\n";
+
+    return 0;
+}
+
