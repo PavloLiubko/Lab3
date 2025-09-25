@@ -1,0 +1,42 @@
+#include <iostream>
+#include <cmath>
+
+int main()
+{
+    setlocale(LC_ALL, "RU"); // українського кодування на жаль не знайшов 
+    
+    int Ax, Ay;
+    std::cout << "Введіть значення х для першої вершини:";
+    std::cin >> Ax;
+    std::cout << "Введіть значення y для першої вершини:";
+    std::cin >> Ay;
+
+    int Bx, By;
+    std::cout << "Введіть значення х для другої вершини:";
+    std::cin >> Bx;
+    std::cout << "Введіть значення y для другої вершини:";
+    std::cin >> By;
+
+    int Cx, Cy;
+    std::cout << "Введіть значення х для третьої вершини:";
+    std::cin >> Cx;
+    std::cout << "Введіть значення y для третьої вершини:";
+    std::cin >> Cy;
+
+    int AB, BC, AC; 
+
+    AB = sqrt(pow((Bx - Ax), 2) + pow((By - Ay), 2));
+    BC = sqrt(pow((Cx - Bx), 2) + pow((Cy - By), 2));
+    AC = sqrt(pow((Cx - Ax), 2) + pow((Cy - Ay), 2));
+
+    int P, p, S;
+
+    P = AB + BC + AC;
+    p = P / 2;
+    S = sqrt(p * (p - AB) * (p - BC) * (p - AC) );
+
+    std::cout << "Периметр вашого трикутника = " << P << "\n" << "Площа вашого трикутника = " << S << "\n";
+
+    return 0;
+}
+
