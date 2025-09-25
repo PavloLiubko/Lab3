@@ -1,0 +1,16 @@
+#include <iostream>
+
+
+int main()
+{
+    setlocale(LC_ALL, "RU"); // українського кодування на жаль не знайшов 
+    
+    std::string n; 
+    std::cout << "Введіть якесь трьохзначне число:";
+    std::cin >> n;
+    
+    std::cout << "Перша цифра: " << n[0] << "\n" << "Остання цифра: " << n[2] << "\n";
+
+    return 0;
+}
+
