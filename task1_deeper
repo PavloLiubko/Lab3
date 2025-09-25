@@ -1,0 +1,21 @@
+#include <iostream>
+
+
+int main()
+{
+    setlocale(LC_ALL, "RU"); // українського кодування на жаль не знайшов 
+    
+    int n;
+    std::cout << "Введіть кількість секунд";
+    std::cin >> n;
+
+    float min, hours;
+
+    min = n / 60;
+    hours = n / 3600; 
+
+    std::cout << "Пройшло " << n << " сек" << "\n" << "Пройшло " << min << " хв" << "\n" << "Пройшло " << hours << " год" << "\n";
+
+    return 0;
+}
+
